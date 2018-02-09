@@ -1,6 +1,6 @@
 # AutomationExercise
 
-### The automation framework has already taken care of the following:
+#### The automation framework has already taken care of the following:
 
 1. Standing data setup and tear-down have been set up in the feature hooks.
 2. Starting/stopping browsers have been setup in the scenario hooks.
@@ -8,7 +8,7 @@
 4. Customised report generation has been setup up in the test run hooks.
 5. Acceptance criteria have been documented in the feature files.
  
-What you need to do:
+#### What you need to do:
 
 1. Fork this repository and implement your solution in your fork.
 2. Create Page Objects to represent the screens of Gmail.
