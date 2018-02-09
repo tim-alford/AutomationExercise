@@ -1,6 +1,7 @@
 # AutomationExercise
 
-* The automation framework has already taken care of the following:
+###The automation framework has already taken care of the following:
+
 1. Standing data setup and tear-down have been set up in the feature hooks.
 2. Starting/stopping browsers have been setup in the scenario hooks.
 3. Taking screenshots have been set up in the scenario step hooks.
