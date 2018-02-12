@@ -1,6 +1,7 @@
 ﻿using Automation.Core.SeleniumUtility;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using System.Diagnostics;
 
 namespace WebUI.Automation.Pages
 {
@@ -18,21 +19,22 @@ namespace WebUI.Automation.Pages
 
 		public WarningDialogComponent WarningDialog { get; set; }
 
-		[FindsBy(How = How.CssSelector, Using = "[data-auto='PageTitle']")]
+		[FindsBy(How = How.TagName, Using = "title")]
 		public IWebElement PageTitle { get; set; }
 
-		public string PageTitleName { get; set; }
+		public string ExpectedPageTitle { get; set; }
 
 		protected IWebElement LoadingOverlay => WebDriver.FindElementByDataAuto("LoadingOverlay");
 
 		protected IExtendedWebDriver WebDriver { get; }
 		public ToastComponent Toast { get; }
 
-		public virtual bool VerifyPage()
+        // I thought it was more appropriate to use Asserts to
+        // verify the contents of the page, instead of returning
+        // a boolean
+		public virtual void VerifyPage()
 		{
-			WebDriver.WaitUntilElementExists(PageTitle);
-
-			return PageTitle.Text.Equals(PageTitleName);
+			Debug.Assert(PageTitle.Text.Equals(ExpectedPageTitle));
 		}
 
 		public void WaitForLoadingToComplete()

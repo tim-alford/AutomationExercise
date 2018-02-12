@@ -1,5 +1,6 @@
 ﻿using Automation.Core.SeleniumUtility;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace WebUI.Automation.Pages.Login
 {
@@ -10,49 +11,36 @@ namespace WebUI.Automation.Pages.Login
         public LoginPage(IExtendedWebDriver webDriver, Options options) : base(webDriver)
         {
             _options = options;
-            PageTitleName = "Gmail";
+            ExpectedPageTitle = "Gmail";
         }
 
         public void NavigateTo()
         {
             WebDriver.NavigateTo(_options.SiteUri);
-            WebDriver.WaitUntilTitleIs(PageTitleName);
         }
 
+        [FindsBy(How=How.XPath, Using = "//input[@type='email']")]
         public IWebElement EmailField
         {
-            get
-            {
-                var locator = By.XPath("//input[@type='email']");
-                WebDriver.WaitUntilElementIsVisible(locator);
-                return WebDriver.FindElement(locator);
-            }
+            get; set;
         }
 
+        [FindsBy(How = How.XPath, Using = "//input[@type='password']")]
         public IWebElement PasswordField
         {
-            get
-            {
-                var locator = By.XPath("//input[@type='password']");
-                WebDriver.WaitUntilElementIsVisible(locator);
-                return WebDriver.FindElement(locator);
-            }
+            get; set;
         }
 
+        [FindsBy(How = How.XPath, Using = "//span[text()='Next']")]
         public IWebElement NextButton
         {
-            get
-            {
-                var locator = By.XPath("//span[text()='Next']");
-                WebDriver.WaitUntilElementIsVisible(locator);
-                return WebDriver.FindElement(locator);
-            }
+            get; set;
         }
 
-        public void CheckForLoginError()
+        [FindsBy(How=How.XPath, Using = "//div[starts-with(text(),'Wrong password')]")]
+        public IWebElement WrongPasswordError
         {
-            var locator = By.XPath("//div[starts-with(text(),'Wrong password')]");
-            WebDriver.WaitUntilElementIsVisible(locator);
+            get; set;
         }
 	}
 }
