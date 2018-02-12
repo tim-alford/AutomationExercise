@@ -108,6 +108,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="results\WebUI.Automation.Tests_Default_2018-02-12T170915.log" />
     <None Include="runtests.cmd" />
     <None Include="SpecRun.runsettings" />
     <None Include="SpecRunTestProfile.xsd">
@@ -139,6 +140,20 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="results\Reports\sorttable.js" />
+    <Content Include="results\Reports\TestSummaryReport.html" />
+    <Content Include="results\Reports\tmp1F2B.png" />
+    <Content Include="results\Reports\tmp3329.png" />
+    <Content Include="results\Reports\tmp3674.png" />
+    <Content Include="results\Reports\tmp7F5D.png" />
+    <Content Include="results\Reports\tmp8B8E.png" />
+    <Content Include="results\Reports\tmp9F1E.png" />
+    <Content Include="results\Reports\tmpC9D7.png" />
+    <Content Include="results\Reports\tmpD472.png" />
+    <Content Include="results\Reports\tmpD6F3.png" />
+    <Content Include="results\Reports\tmpD935.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Automation.Core.1.0.0\Build\Automation.Core.targets" Condition="Exists('..\packages\Automation.Core.1.0.0\Build\Automation.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
