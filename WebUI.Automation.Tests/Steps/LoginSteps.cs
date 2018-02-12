@@ -22,7 +22,7 @@ namespace WebUI.Automation.Tests.Steps
         public void NavigateToGmail()
         {
             login.NavigateTo();
-            login.VerifyPage();
+            WebDriver.WaitUntilTitleIs(login.ExpectedPageTitle);
         }
         
         [When("I submit my valid credentials")]
@@ -86,7 +86,7 @@ namespace WebUI.Automation.Tests.Steps
         public void RemainOnLoginScreen()
         {
             // verify that the page hasn't changed
-            login.VerifyPage();
+            WebDriver.WaitUntilTitleIs(login.ExpectedPageTitle);
         }
 
         [Then("I am shown a message indicating that my credentials are incorrect")]
