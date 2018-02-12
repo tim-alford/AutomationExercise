@@ -65,6 +65,7 @@ namespace WebUI.Automation.Tests.Steps
             // verify the existance of the login screen by checking 
             // page title and checking for the password field
             WebDriver.WaitUntilTitleIs(login.ExpectedPageTitle);
+            WaitUntilVisible(login.PasswordField);
             login.PasswordField.Click();
         }
 
@@ -87,6 +88,8 @@ namespace WebUI.Automation.Tests.Steps
         {
             // verify that the page hasn't changed
             WebDriver.WaitUntilTitleIs(login.ExpectedPageTitle);
+            WaitUntilVisible(login.PasswordField);
+            login.PasswordField.Click();
         }
 
         [Then("I am shown a message indicating that my credentials are incorrect")]
