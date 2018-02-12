@@ -38,7 +38,7 @@ namespace WebUI.Automation.Tests.Steps
         [Then("I see my Gmail Inbox")]
         public void IShouldSeeMyInbox()
         {
-            inbox.InboxLink.Click();
+            WaitUntilVisible(inbox.InboxLink);
         }
 
         [Given("I have logged in to my Gmail")]
@@ -50,6 +50,7 @@ namespace WebUI.Automation.Tests.Steps
             WaitUntilVisible(login.PasswordField);
             login.PasswordField.SendKeys(Constants.VALID_PASSWORD);
             login.NextButton.Click();
+            WebDriver.WaitUntilElementExists(inbox.InboxLink);
         }
 
         [When("I sign out")]
