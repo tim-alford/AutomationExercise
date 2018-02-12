@@ -1,0 +1,98 @@
+﻿Discovering target: IE
+Discovering tests from assembly: C:\Users\talford\Source\Repos\AutomationExercise\WebUI.Automation.Tests\bin\Debug\WebUI.Automation.Tests.dll
+Appdomain Disposed
+Discovering target: Chrome
+Discovering tests from assembly: C:\Users\talford\Source\Repos\AutomationExercise\WebUI.Automation.Tests\bin\Debug\WebUI.Automation.Tests.dll
+Appdomain Disposed
+Discovering target: Firefox
+Discovering tests from assembly: C:\Users\talford\Source\Repos\AutomationExercise\WebUI.Automation.Tests\bin\Debug\WebUI.Automation.Tests.dll
+Appdomain Disposed
+Test Suite Dump
+#0: WebUI.Automation.Tests/Default - 
+#8: Chrome - 
+#9: WebUI.Automation.Tests - 
+#10: Login - 
+#11: Valid Gmail login - Target:Chrome/TestAssembly:WebUI.Automation.Tests/Feature:Login/Scenario:Valid+Gmail+login
+#12: Invalid Gmail login - Target:Chrome/TestAssembly:WebUI.Automation.Tests/Feature:Login/Scenario:Invalid+Gmail+login
+#13: Sign out from Gmail - Target:Chrome/TestAssembly:WebUI.Automation.Tests/Feature:Login/Scenario:Sign+out+from+Gmail
+End: Test Suite Dump
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #11 from normal test queue 
+Thread#0:Scheduler: considering testitem #11 for thread 0
+Thread#0:TestItem#11:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#11:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#11:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #11 for thread 0
+Thread#0:Scheduler: Test #11 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread #0: creating new test thread executor for WebUI.Automation.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Chrome)
+Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: C:\Users\talford\AppData\Local\Temp\VisualStudioTestExplorerExtensions\SpecRun.Runner.1.6.0\tools\TechTalk.SpecRun.Framework.Executor.dll
+Thread#0: Test #11/0 is started on thread #0
+Thread#0:T:-> Using app.config
+Thread#0:B:Given I am on the Gmail login screen
+Thread#0:T:done: LoginSteps.NavigateToGmail() (4.3s)
+Thread#0:T:SCREENSHOT[ tmp7F5D.png ]SCREENSHOT
+Thread#0:B:When I submit my valid credentials
+Thread#0:T:done: LoginSteps.SubmitValidCredentials() (2.4s)
+Thread#0:T:SCREENSHOT[ tmp8B8E.png ]SCREENSHOT
+Thread#0:B:Then I see my Gmail Inbox
+Thread#0:T:done: LoginSteps.IShouldSeeMyInbox() (0.1s)
+Thread#0:T:SCREENSHOT[ tmp9F1E.png ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #12 from normal test queue 
+Thread#0:Scheduler: considering testitem #12 for thread 0
+Thread#0:TestItem#12:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#12:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#12:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #12 for thread 0
+Thread#0:Scheduler: Test #12 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #11/0 is finished on thread #0 as Succeeded within 21.4252255 seconds
+Thread#0: Test #12/0 is started on thread #0
+Thread#0:B:Given I am on the Gmail login screen
+Thread#0:T:done: LoginSteps.NavigateToGmail() (3.9s)
+Thread#0:T:SCREENSHOT[ tmpC9D7.png ]SCREENSHOT
+Thread#0:B:When I submit invalid credentials
+Thread#0:T:done: LoginSteps.SubmitInvalidCredentials() (2.1s)
+Thread#0:T:SCREENSHOT[ tmpD472.png ]SCREENSHOT
+Thread#0:B:Then I remain on the Gmail login screen
+Thread#0:T:done: LoginSteps.RemainOnLoginScreen() (0.1s)
+Thread#0:T:SCREENSHOT[ tmpD6F3.png ]SCREENSHOT
+Thread#0:B:And I am shown a message indicating that my credentials are incorrect
+Thread#0:T:done: LoginSteps.CheckForErrorMessage() (0.0s)
+Thread#0:T:SCREENSHOT[ tmpD935.png ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #13 from normal test queue 
+Thread#0:Scheduler: considering testitem #13 for thread 0
+Thread#0:TestItem#13:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#13:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#13:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #13 for thread 0
+Thread#0:Scheduler: Test #13 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #12/0 is finished on thread #0 as Succeeded within 14.4428261 seconds
+Thread#0: Test #13/0 is started on thread #0
+Thread#0:B:Given I have logged in to my Gmail
+Thread#0:T:done: LoginSteps.IHaveLoggedIntoMyGmail() (11.3s)
+Thread#0:T:SCREENSHOT[ tmp1F2B.png ]SCREENSHOT
+Thread#0:B:When I sign out
+Thread#0:T:done: LoginSteps.ISignOut() (4.5s)
+Thread#0:T:SCREENSHOT[ tmp3329.png ]SCREENSHOT
+Thread#0:B:Then I am navigated to the Gmail login screen
+Thread#0:T:done: LoginSteps.NavigatedToGmailLoginScreen() (0.2s)
+Thread#0:T:SCREENSHOT[ tmp3674.png ]SCREENSHOT
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: at the end of normal test queue
+Thread#0:Scheduler: enumerator for thread is at end
+Thread#0:Scheduler: No more tests for thread
+Thread#0: Test #13/0 is finished on thread #0 as Succeeded within 24.1533815 seconds
+Appdomain Disposed
+Thread#-1:Scheduler: get next test for thread -1
+Thread#:Scheduler: at the end of normal test queue
+Thread#-1:Scheduler: enumerator for thread is at end
+Total: 3
+Succeeded: 3
+Ignored: 0
+Pending: 0
+Skipped: 0
+Failed: 0
